@@ -1,0 +1,20 @@
+{
+  "name": "appium-tests-app1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wdio-dot-reporter": "^0.0.10",
+    "wdio-jasmine-framework": "^0.3.5",
+    "webdriverio": "^4.13.1"
+  },
+  "dependencies": {
+    "appium-doctor": "^1.4.3"
+  }
+}
