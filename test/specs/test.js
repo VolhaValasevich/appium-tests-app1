@@ -15,8 +15,7 @@ describe('App1', () => {
             browser.element('#taskDescriptionEditText').setValue('Task Description');
             browser.back();
             browser.click('#saveTaskButton');
-            const newTask = browser.element('android= new UiSelector().text("A New Task")');
-            expect(newTask.value).not.toEqual(null, `${newTask.message} [${newTask.selector}]`);
+            expect(browser.isExisting('android= new UiSelector().text("A New Task")')).toEqual(true, 'No new task was added');
         });
     });
 
@@ -34,8 +33,7 @@ describe('App1', () => {
             browser.element('#taskTitleEditText').setValue('Modified Task');
             browser.back();
             browser.click('#saveTaskButton');
-            const newTask = browser.element('android= new UiSelector().text("Modified Task")');
-            expect(newTask.value).not.toEqual(null, `${newTask.message} [${newTask.selector}]`);
+            expect(browser.isExisting('android= new UiSelector().text("Modified Task")')).toEqual(true, 'No task was modified');
         });
     });
 
